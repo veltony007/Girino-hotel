@@ -1,0 +1,2977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.f-fr {
+    font-family: 'Rufina', serif;
+}
+
+.f-fc {
+    font-family: 'Cookie', cursive;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.d-f {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pos-val-rel {
+
+    position: relative;
+}
+
+.pos-val-abs {
+
+    position: absolute;
+}
+
+header .container div #check {
+    display: none;
+}
+
+header .container div .checkbox {
+    display: none;
+    z-index: 1000;
+}
+
+header .container div .logo {
+    display: none;
+}
+
+header .container div .navbar {
+    display: none;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(252, 134, 33);
+    transition: all 0.3s ease-in-out;
+}
+
+.icon span {
+    justify-content: center;
+    top: -10px;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    right: -5px;
+    background-color: rgb(252, 134, 33);
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: white;
+    background-color: rgb(252, 134, 33);
+}
+
+.icon:hover span {
+    background-color: black;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+header .container div {
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
+header {
+    background: url("./Asserts/hero-img-1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+header .container div {
+    gap: 15px;
+    padding: 50px 30px;
+    border-radius: 65px;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    padding: 20px 50px;
+    background-color: white;
+    border-radius: 60px;
+}
+
+.home:hover .home1 {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.home .home1 {
+    flex-direction: column;
+    width: 250px;
+    background-color: white;
+    border-radius: 0px;
+    align-items: start;
+    top: 68px;
+    left: 0px;
+    padding: 0;
+    opacity: 0;
+    border-top: 4px solid rgb(252, 134, 33);
+    transition: all 0.5s ease-in-out;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    gap: 0px;
+    z-index: 10000;
+}
+
+.home1 a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 20px 10px;
+}
+
+header .container div nav a span {
+    margin-right: 15px;
+}
+
+header .container div nav a img {
+    width: 150px;
+    height: fit-content;
+    margin: 0 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+a:hover {
+    color: rgb(252, 134, 33);
+}
+
+.image,
+.image1 {
+    height: fit-content;
+    right: 30px;
+}
+
+.image {
+    width: 500px;
+    height: fit-content;
+    top: 30%;
+    transform: rotate(2);
+    animation: zoom-in-zoom-out 1s ease-in-out;
+
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+
+    50% {
+
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+
+        transform: scale(1, 1);
+    }
+}
+
+.image1 {
+    width: 250px;
+    height: fit-content;
+    bottom: 5%;
+    z-index: 5;
+    animation: bouncing-loader 0.6s infinite alternate;
+}
+
+@keyframes bouncing-loader {
+    to {
+
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+.sec1 .container {
+    flex-direction: column;
+    padding: 100px 0 130px;
+}
+
+.span-val {
+    font-size: 30px;
+    color: rgb(252, 134, 33);
+}
+
+.h2-val {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 400;
+    color: rgb(0, 1, 10);
+}
+
+.p-val {
+    font-size: 16px;
+    width: 500px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.img-val {
+    padding: 20px 0;
+}
+
+.s-val {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 500;
+}
+
+.s-val span {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(252, 134, 33);
+    color: white;
+    justify-content: center;
+    border: 2px solid rgb(252, 134, 33);
+    transition: all 0.3s ease-in-out;
+}
+
+.s-val .d-f:hover {
+    color: rgb(252, 134, 33);
+    background-color: white;
+}
+
+.s-val div {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px dotted rgb(252, 134, 33);
+    animation: span 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes span {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.services {
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 50px 0;
+}
+
+.service-val {
+    width: calc(33.33% - 20px);
+    height: fit-content;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-val::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: -100;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-val:hover::before {
+    border-color: rgb(252, 134, 33);
+}
+
+.service-val2 {
+    width: 100%;
+}
+
+.service-val2,
+.service-val2:hover {
+    overflow: hidden;
+}
+
+.service-val2 img {
+    width: 100%;
+    height: fit-content;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-val2 img:hover {
+    transform: scale(1.1);
+}
+
+.service-val1 {
+    padding: 30px 30px;
+    background-color: white;
+}
+
+.service-val1 p {
+    width: 100%;
+    text-align: left;
+}
+
+.h3-val {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.service-val1 a {
+    bottom: -25px;
+    left: 85px;
+    color: white;
+    background-color: rgb(252, 134, 33);
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid rgb(252, 134, 33);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    font-weight: 700;
+}
+
+.ser-val3 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    bottom: -25px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+
+.service-val1:hover .ser-val3 {
+    opacity: 0;
+}
+
+.service-val:hover {
+    border-color: rgb(252, 134, 33);
+}
+
+.service-val .service-val1 .d-f:hover {
+    color: rgb(252, 134, 33);
+    background-color: white;
+}
+
+.service-val:hover .service-val1 a {
+    left: 20px;
+    opacity: 1;
+}
+
+.sec2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Asserts/pexels-life\ \(1\).jpg");
+    width: 100%;
+    height: fit-content;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.sec2 .container {
+    flex-direction: column;
+}
+
+.sec2 .container .h2-val {
+    color: white;
+}
+
+.sec2 .container .p-val {
+    color: white;
+    width: 550px;
+}
+
+.form-val {
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 0 0;
+    gap: 30px;
+}
+
+.arrow1,
+.arrow2 {
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: rgb(119, 119, 119);
+    cursor: pointer;
+}
+
+.arrow1 {
+    left: -20px;
+}
+
+.arrow2 {
+    right: -20px;
+}
+
+.form-val1 {
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.form-val1 div {
+    width: calc(33.33% - 20px);
+}
+
+.form-val1 div i {
+    color: rgb(119, 119, 119);
+    top: 25px;
+    right: 25px;
+}
+
+.form-val1 div input {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    padding: 25px 20px;
+    background-color: #00010a;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-val2 {
+    width: 100%;
+}
+
+.form-val2 textarea {
+    width: 100%;
+    background-color: #00010a;
+    padding: 20px;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    resize: none;
+    color: white;
+}
+
+.form-val2 i {
+    color: rgb(119, 119, 119);
+    top: 20px;
+    right: 20px;
+}
+
+.form-val2 textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.form-val1 div input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+textarea:focus,
+input:focus {
+    color: #ffffff;
+    outline: none;
+}
+
+.btn {
+    padding: 20px 35px;
+    font-size: 16px;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(252, 134, 33);
+    border: 2px solid rgb(252, 134, 33);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    color: rgb(252, 134, 33);
+    background-color: white;
+}
+
+.sec3 {
+    padding: 100px 0 150px;
+}
+
+.sec3 .container {
+    flex-direction: column;
+}
+
+.about-val1 {
+    width: 100%;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.ab-val2 {
+    width: calc(50% - 25px);
+}
+
+.ab-val2 img {
+    width: 100%;
+    height: fit-content;
+}
+
+.about-val1 .d-f {
+    padding: 50px 0;
+    gap: 10px;
+    flex-direction: column;
+    align-items: start;
+    width: calc(50% - 25px);
+}
+
+.about-val1 div .p-val {
+    width: 100%;
+    text-align: left;
+}
+
+.about-val1-1 {
+    bottom: -45px;
+    right: 0px;
+    width: 65%;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.ab-val1 {
+    width: calc(40% - 30px);
+    height: fit-content;
+    background-color: white;
+}
+
+.ab-val1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.ab-val1:hover::before {
+    border-color: rgb(252, 134, 33);
+}
+
+.ab-val1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -10px;
+    opacity: 0.4;
+    background-color: white;
+    z-index: 1;
+}
+
+.ab-val1 img {
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+}
+
+.about-val1-2 {
+    flex-direction: column;
+    width: calc(60% - 30px);
+    gap: 20px;
+}
+
+.about-val1-3 {
+    gap: 20px;
+}
+
+.about-val1-3 div {
+    gap: 10px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.about-val1-3 div p {
+    text-align: left;
+    width: 100%;
+}
+
+.about-val1-3 img {
+    height: 72px;
+    width: fit-content;
+}
+
+.about-val1-4 h3 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+.about-val1-4 p {
+    text-align: left;
+    width: 100%;
+}
+
+.sec4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./Asserts/pixel-food.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.sec4 .container {
+    flex-wrap: wrap;
+}
+
+.sec4 .container div {
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.sec4 .container div span {
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+}
+
+.sec4 .container div p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 26px;
+    width: 95px;
+}
+
+.sec5 {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("./Asserts/food-menu-bg-img-1-1.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.sec5::before {
+    content: '';
+    background: url("./Asserts/bg-shape-1-1.png");
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 85%;
+    top: 65%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.sec5 .container {
+    flex-direction: column;
+    z-index: 10;
+}
+
+.type-btn {
+    gap: 10px;
+}
+
+.type-btn a {
+    color: rgb(119, 119, 119);
+    background-color: rgb(246, 246, 246);
+    padding: 20px 40px;
+    border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.type-btn a:hover {
+    color: white;
+    background-color: rgb(252, 134, 33);
+}
+
+.type-btn .active {
+    color: white;
+    background-color: rgb(252, 134, 33);
+}
+
+.menulist {
+    flex-direction: column;
+    padding-top: 50px;
+    width: 100%;
+    gap: 50px;
+}
+
+.list1 {
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+}
+
+.list-val1 {
+    width: calc(50% - 25PX);
+    align-items: flex-end;
+}
+
+.list-val1 .d-f {
+    flex-direction: column;
+    width: 120px;
+    overflow: hidden;
+}
+
+.list-val1 .d-f img,
+.list-val2 .d-f img {
+    width: 100%;
+    height: 120px;
+    transform: scaleX(1) scaleY(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.list-val1 .d-f img:hover,
+.list-val2 .d-f img:hover {
+    transform: scaleX(1.1) scaleY(1.1);
+}
+
+.list-val1-1 {
+    width: calc(100% - 120px);
+    height: 120px;
+    padding: 30px 30px 0;
+    border: 1px dashed rgb(119, 119, 119);
+    border-right: none;
+    border-left: none;
+}
+
+.list-val1-1 .h3-val {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.list-val1 .d-f div {
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    color: white;
+    background-color: rgb(252, 134, 33);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.list-val1 .d-f div s {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.list-val2 .d-f div s {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.sp-val {
+    font-size: 20px;
+    color: rgb(252, 134, 33);
+    padding: 20px;
+    border-radius: 50%;
+    left: -29px;
+    bottom: 15%;
+}
+
+.sp-val1 {
+    font-size: 20px;
+    color: rgb(252, 134, 33);
+    padding: 20px;
+    border-radius: 50%;
+    right: -29px;
+    bottom: 15%;
+}
+
+.list-val2 {
+    width: calc(50% - 25PX);
+    align-items: end;
+}
+
+.list-val2 .d-f {
+    flex-direction: column;
+    width: 120px;
+    overflow: hidden;
+}
+
+.list-val2 .list-val2-1 {
+    width: calc(100% - 120px);
+    height: 120px;
+    padding: 30px 30px 0;
+    border: 1px dashed rgb(119, 119, 119);
+    border-left: none;
+    border-right: none;
+}
+
+.list-val2-1::before {
+    content: '';
+    width: 1px;
+    border-right: 1px dashed rgb(119, 119, 119);
+    top: 0;
+    right: 0;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-val2-1::after {
+    content: '';
+    width: 1px;
+    border-right: 1px dashed rgb(119, 119, 119);
+    right: 0;
+    bottom: 0;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-val1-1::before {
+    content: '';
+    width: 1px;
+    border-left: 1px dashed rgb(119, 119, 119);
+    top: 0;
+    left: 0;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-val1-1::after {
+    content: '';
+    width: 1px;
+    border-left: 1px dashed rgb(119, 119, 119);
+    left: 0;
+    bottom: 0;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-val2-1 .h3-val {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.list-val2-1 p,
+.list-val1-1 p {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+}
+
+.list-val2 .d-f div {
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    color: white;
+    background-color: rgb(252, 134, 33);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.sec6 .container {
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.gallery-val {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.galleryimage {
+    width: calc(25% - 22.66px);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.g-image {
+    width: 100%;
+    height: fit-content;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.galleryimage:hover .g-image {
+    transform: scale(1.3);
+}
+
+.galleryimage .d-f {
+    justify-content: center;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+}
+
+.galleryimage .d-f i {
+    font-size: 42px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    z-index: 30;
+    display: flex;
+    opacity: 0;
+    transition-delay: 200ms;
+}
+
+.galleryimage:hover .d-f i {
+    opacity: 1;
+}
+
+.galleryimage .d-f::before {
+    content: '';
+    position: absolute;
+    height: 190px;
+    width: 222px;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 20;
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transform-origin: right;
+    transform: scaleX(0);
+    display: block;
+}
+
+.galleryimage .d-f:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.galleryimage .d-f i:hover {
+    color: rgb(252, 134, 33);
+}
+
+.sec7 .container {
+    background: url("./Asserts/cooking-banner.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.sec7 .container img {
+    width: 30%;
+    height: fit-content;
+}
+
+.sec7 .container a {
+    padding: 20px 30px;
+    border-radius: 6px;
+    background-color: rgb(252, 134, 33);
+    border: 2px solid rgb(252, 134, 33);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.sec7 .container a:hover {
+    color: rgb(252, 134, 33);
+    background-color: white;
+}
+
+.sec7::after {
+    content: '';
+    background: url("./Asserts/bg-shape-1.png");
+    width: 100%;
+    height: 400px;
+    left: 0px;
+    bottom: -115%;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.sec8 .container {
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.test-val {
+    background: url("./Asserts/testimonial-bg-1-1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 950px;
+    height: 900px;
+    background-color: white;
+    justify-content: center;
+}
+
+.test-val1 {
+    flex-direction: column;
+    justify-content: center;
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid white;
+}
+
+.test-val1:hover {
+    border: 2px solid rgb(252, 134, 33);
+}
+
+.test-val1 span {
+    color: rgb(252, 134, 33);
+    font-weight: 400;
+}
+
+.test-val1 .p-val {
+    width: 350px;
+}
+
+.test-val1 .h3-val {
+    color: black;
+}
+
+.test-val1 .d-f div {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(119, 119, 119);
+    margin: 20px 10px 0 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.test-val1 .d-f div:hover {
+    background-color: rgb(252, 134, 33);
+}
+
+.sec9 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./Asserts/footer-bg-2-1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    padding: 100px 0;
+}
+
+.sec9 .container {
+    flex-wrap: wrap;
+}
+
+.sec9 .container div {
+    width: 50%;
+}
+
+.sec9 .container div h2 {
+    font-size: 36px;
+    color: white;
+    font-weight: 400;
+}
+
+.sec9 .container div p {
+    color: white;
+    padding: 10px 0;
+}
+
+.sec9 .container .d-f {
+    background-color: white;
+    padding-left: 30px;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+.sec9 .container .d-f input {
+    border: none;
+    padding: 25px 0;
+    width: 60%;
+}
+
+.sec9 .container .d-f input:focus {
+    outline: none;
+    color: black;
+}
+
+.sec9 .container .d-f a {
+    text-align: center;
+    color: white;
+    border-radius: 50px;
+    background-color: rgb(252, 134, 33);
+    padding: 23px 40px;
+    border: 2px solid rgb(252, 134, 33);
+    transition: all 0.3s ease-in-out;
+}
+
+.sec9 .container .d-f a:hover {
+    background-color: white;
+    color: rgb(252, 134, 33);
+}
+
+.sec10 .container {
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.blog-con-1 {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-top: 50px;
+}
+
+.blog-con-2 {
+    width: calc(50% - 25px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-con-2::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-con-2 div {
+    overflow: hidden;
+}
+
+.blog-con-2:hover {
+    border: 1px solid rgb(252, 134, 33);
+}
+
+.blog-con-2:hover::before {
+    border: 1px solid rgb(252, 134, 33);
+}
+
+.blog-con-2:hover .blog-con-4 {
+    background-color: rgb(252, 134, 33);
+}
+
+.blog-con-2 div img {
+    width: 100%;
+    height: fit-content;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-con-2 div img:hover {
+    transform: scale(1.2);
+}
+
+.blog-con-1 a {
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-con-1 a:hover {
+    color: rgb(252, 134, 33);
+}
+
+.blog-con-3 {
+    padding: 30px;
+    background-color: white;
+}
+
+.blog-con-3 div {
+    padding: 20px 0 30px;
+    justify-content: start;
+    gap: 10px;
+}
+
+.blog-con-3 div span {
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+}
+
+.blg-con-3 .d-f span a {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+}
+
+.blog-con-3 div span i {
+    margin-right: 5px;
+}
+
+.blog-con-4 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    bottom: -30px;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.sec11 {
+    background: url(./hotel.img/bg-3.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+}
+
+.sec11 .container {
+    padding: 100px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.sec11-1 {
+    width: calc(33.33% - 33.33px);
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+}
+
+.sec11-1 .h2-val {
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    font-weight: 400;
+    position: relative;
+}
+
+.sec11-1 .h2-val::before {
+    content: '';
+    width: 10px;
+    height: 3px;
+    background-color: rgb(252, 134, 33);
+    position: absolute;
+    bottom: -10px;
+}
+
+.sec11-1 .h2-val::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: rgb(252, 134, 33);
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+}
+
+.sec11-2 .d-f {
+
+    margin-top: 10px;
+}
+
+.sec11-2 .d-f span {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid rgb(119, 119, 119);
+    color: white;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sec11-2 .d-f span:hover {
+    background-color: rgb(252, 134, 33);
+    border-color: rgb(252, 134, 33);
+}
+
+.sec11-2 p {
+    line-height: 32px;
+    color: rgb(119, 119, 119);
+    padding-right: 20px;
+    font-weight: 500;
+}
+
+.sec11-3 {
+    width: 100%;
+}
+
+.sec11-3 div {
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    gap: 15px;
+}
+
+.sec11-3 div span {
+    cursor: pointer;
+    color: rgb(119, 119, 119);
+    justify-content: start;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.sec11-3 div span:hover {
+    color: rgb(252, 134, 33);
+}
+
+.sec11-4 {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px
+}
+
+.sec11-4 .d-f {
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.sec11-4 .d-f:hover .i1 img {
+    transform: scale(1.4);
+    overflow: hidden;
+}
+
+.sec11-4 .d-f:hover .sec11-5 .h4-val a {
+    color: rgb(252, 134, 33);
+}
+
+.i1 img {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.i1,
+.i1 img {
+    overflow: hidden;
+    height: 80px;
+    width: 80px;
+}
+
+.sec11-5 {
+    color: rgb(119, 119, 119);
+    width: 70%;
+}
+
+.sec11-5 span i {
+    color: rgb(252, 134, 33);
+    margin-right: 5px;
+}
+
+.sec11-5 span {
+    font-size: 14px;
+}
+
+.sec11-5 a {
+    color: rgb(119, 119, 119);
+    transition: all 0.3s ease-in-out;
+}
+
+.sec11-5 .h4-val a {
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.sec11-5 .h4-val {
+    margin-bottom: 5px;
+}
+
+.sec11-5 a:hover {
+    color: rgb(252, 134, 33);
+}
+
+footer {
+    background-color: black;
+    padding: 30px 0;
+    color: rgb(119, 119, 119);
+}
+
+footer .container p a {
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .container p a:hover {
+    color: rgb(252, 134, 33);
+}
+
+footer .container div {
+    gap: 40px;
+}
+
+footer .container div a {
+    color: rgb(119, 119, 119);
+}
+
+footer .container div a:hover {
+    color: rgb(252, 134, 33);
+}
+
+.test-val1 .d-f .test-val1-1 {
+    border: 1px solid rgb(252, 134, 33);
+    background-color: white;
+    height: 11px;
+    width: 11px;
+}
+
+@media(max-width:1024px) {
+    .container {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    header .container div nav a img {
+        width: 100px;
+        margin: 0 10px;
+    }
+
+
+    nav {
+        padding: 20px 30px;
+    }
+
+    .sec1 .container {
+        padding: 80px 0 110px;
+    }
+
+    .home .home1 {
+        top: 57px;
+    }
+
+    .services {
+        gap: 50px;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .service-val {
+        width: calc(50% - 25px);
+    }
+
+    .arrow1,
+    .arrow2 {
+        display: none;
+    }
+
+    .sec2 {
+        padding: 80px 0;
+    }
+
+    .sec3 {
+        padding: 80px 0 130px;
+    }
+
+    .h2-val {
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+    .h3-val {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .p-val {
+        padding: 0px;
+    }
+
+    .about-val1 {
+        gap: 30px;
+    }
+
+    .ab-val2 {
+        width: calc(50% - 15px);
+    }
+
+    .about-val1 .d-f {
+        padding: 0px;
+        width: calc(50% - 15px);
+    }
+
+    .about-val1-1 {
+        gap: 40px;
+    }
+
+    .ab-val1 {
+        width: calc(40% - 20px);
+    }
+
+    .about-val1-2 {
+        width: calc(60% - 20px);
+    }
+
+    .sec7::after {
+        display: none;
+    }
+
+    .sec11 .container {
+        gap: 30px;
+    }
+
+    .sec11-1 {
+        width: calc(33.33% - 13.33px);
+    }
+
+    .gallery-val {
+        justify-content: center;
+    }
+
+    .galleryimage {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width:768px) {
+    header .container div {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .home .home1 {
+        position: unset;
+        transform: rotate(0deg);
+        opacity: 1;
+        display: none;
+        margin-top: 0px;
+    }
+
+    .home:hover .home1 {
+        display: flex;
+    }
+
+    .container {
+        width: calc(100% - 50px);
+    }
+
+    .about-val1-1 {
+        position: relative;
+        width: 100%;
+    }
+
+    .ab-val1,
+    .about-val1-2 {
+        width: calc(50% - 20px);
+    }
+
+    .ab-val1::before {
+        border-color: white;
+    }
+
+    .about-val1-3 img {
+        width: 50px;
+    }
+
+    .type-btn a {
+        padding: 20px 30px;
+    }
+
+    .span-val,
+    .h3-val {
+        font-size: 22px;
+    }
+
+    .sec9 .container div h2 {
+        font-size: 32px;
+    }
+
+    .test-val {
+        width: 600px;
+        height: 600px;
+        margin-top: 30px;
+    }
+
+    .list-val1 .d-f img,
+    .list-val2 .d-f img {
+        height: 250px;
+    }
+
+    .test-val1 {
+        width: 500px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    header .container .d-f nav {
+        padding: 0px;
+    }
+
+    header .container .d-f nav ul li {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .sec4 {
+        padding: 50px 0;
+    }
+
+    .sec5::before {
+        display: none;
+    }
+
+    .sec4 .container div {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .sec4 .container div p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-val1 div {
+        width: 100%;
+    }
+
+    .list-val1 {
+        align-items: center;
+        flex-direction: column-reverse;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .list-val2 {
+        align-items: center;
+        flex-direction: column;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+    .list-val1-1,
+    .list-val2 .list-val2-1 {
+        border: 1px dashed;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        border: none;
+    }
+
+    .list-val2-1::before,
+    .list-val2-1::after,
+    .list-val1-1::before,
+    .list-val1-1::after {
+        border: transparent;
+        color: transparent;
+    }
+
+    .sp-val,
+    .sp-val1 {
+        display: none;
+    }
+
+    .list-val1 .d-f,
+    .list-val2 .d-f {
+        width: 100%;
+    }
+
+    .list-val1 .d-f div,
+    .list-val2 .d-f div {
+        padding: 10px;
+        border-radius: 6px;
+        color: black;
+        background-color: white;
+        position: absolute;
+        z-index: 100;
+        top: 30px;
+        right: 30px;
+    }
+
+    .list-val1 .d-f div span,
+    .list-val2 .d-f div span {
+        font-weight: 700;
+    }
+
+    .list-val1 .d-f div s,
+    .list-val2 .d-f div s {
+        font-weight: 400;
+        color: rgb(119, 119, 119);
+    }
+
+    .galleryimage {
+        width: calc(50% - 15px);
+    }
+
+    .sec9 {
+        padding: 50px 0;
+    }
+
+    .sec9 .container div {
+        width: 100%;
+    }
+
+    .sec9 .container .d-f {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .blog-con-1 {
+        gap: 30px;
+    }
+
+    .blog-con-2,
+    .sec11-1 {
+        width: calc(50% - 25px);
+    }
+
+    .sec11 .container {
+        padding: 50px 0;
+    }
+
+    footer .container div {
+        gap: 20px;
+    }
+
+    header .container div .checkbox {
+        display: block;
+        color: black;
+        font-size: 28px;
+    }
+
+    .checkbox .close {
+        display: none;
+    }
+
+    header .container div .logo {
+        display: block;
+        width: 60%;
+        height: fit-content;
+    }
+
+    header .container div .logo img {
+        width: 100px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    header .container div {
+        justify-content: space-between;
+        background-color: white;
+        padding: 20px 30px;
+        margin-top: 20px;
+    }
+
+    header .container div .navbar {
+        margin-top: 0px;
+        display: block;
+        position: fixed;
+        background-color: white;
+        color: black;
+        transition-delay: 1s;
+        transition: all 0.5s ease-in-out;
+        top: 0px;
+        left: -100%;
+        height: 100vh;
+        width: 50%;
+        border-radius: 0px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        z-index: 500;
+        gap: 20px;
+    }
+
+    header .container div .navbar::before,
+    header .container div .navbar::after {
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        position: absolute;
+        content: '';
+    }
+
+    header .container div .navbar::before {
+        width: 300%;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -5;
+    }
+
+    header .container div .navbar::after {
+        width: 100%;
+        top: 0;
+        background-color: white;
+        z-index: -1;
+    }
+
+    header .container div .navbar .d-f {
+        flex-direction: column;
+    }
+
+    header .container div .navbar .d-f li a {
+        flex-direction: row;
+        width: 250px;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    header .container div .navbar .d-f .home {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    header .container div .navbar .d-f .home:hover span {
+        transform: rotate(90deg);
+        background-color: rgb(252, 134, 33);
+        color: white;
+    }
+
+    header .container div .navbar .d-f .home1 {
+        top: 20px;
+    }
+
+    header .container div .navbar .d-f li a img {
+        width: 150px;
+        height: fit-content;
+    }
+
+    header .container div .navbar .d-f .home span {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    header .container div .navbar .d-f .il2 {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #check:checked~.navbar {
+        left: 0px;
+    }
+
+    #check:checked~.checkbox {
+        color: rgb(252, 134, 33);
+    }
+
+    #check:checked~.checkbox .menu {
+        display: none;
+    }
+
+    #check:checked~.checkbox .close {
+        display: block;
+    }
+
+    #check:checked~.navbar::before {
+        left: 0px;
+    }
+
+    #check:checked~.navbar::after {
+        left: 0px;
+    }
+
+    .image {
+        width: 300px;
+    }
+
+    .image1 {
+        width: 150px;
+        bottom: 20%;
+    }
+
+    @keyframes image1 {
+        0% {
+            bottom: 100%;
+        }
+
+        100% {
+            bottom: 20%;
+        }
+    }
+
+    .mgn-val {
+        margin-right: -94px;
+    }
+
+    .sec2 {
+        padding: 80px 0;
+    }
+
+    .form-val {
+        padding: 20px 0 0;
+    }
+
+    .blog-con-1 {
+        gap: 50px;
+    }
+
+    .blog-con-3 {
+        padding: 20px;
+    }
+}
+@media (max-width:600px) {
+    .test-val {
+        width: 500px;
+        height: 500px;
+    }
+
+    .test-val1 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .test-val1 img {
+        height: 115px;
+        width: 100px;
+    }
+
+    .blog-con-2 {
+        width: 100%;
+    }
+
+    .type-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sec7 .container {
+        height: 200px;
+    }
+
+    .about-val1 {
+        align-items: center;
+    }
+
+    .about-val1 .d-f {
+        width: 100%;
+    }
+
+    .about-val1-1,
+    .about-val1 {
+        flex-direction: column;
+    }
+
+    .about-val1-2 {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .test-val {
+        width: 400px;
+        height: 400px;
+    }
+
+    .service-val {
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .sec11-1 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .p-val {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .test-val1 .p-val {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .test-val,
+    .test-val1 {
+        width: 350px;
+    }
+
+    .sec7 .container a {
+        padding: 10px 20px;
+    }
+
+    .sec11-2 p {
+        line-height: 28px;
+    }
+
+    .sec11-3 div span,
+    .sec11-2 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:425px) {
+    header .container div .navbar {
+        width: 100%;
+        z-index: 800;
+    }
+
+    header .container div .navbar::before {
+        background-color: transparent;
+    }
+
+    #check:checked~.checkbox {
+        color: black;
+    }
+
+    .mgn-val {
+        margin-right: -18px;
+    }
+
+    header .container div .logo {
+        width: 45%;
+    }
+
+    header .container div {
+        gap: 0px;
+        padding: 20px 12px;
+        border-radius: 14px;
+    }
+
+    .icon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .form-val1 div input {
+        height: 50px;
+    }
+
+    header .container div .checkbox {
+        margin-left: 10px;
+    }
+
+    .about-val1-3 img {
+        display: none;
+    }
+
+    .form-val1 div i {
+        top: 18px;
+    }
+
+    .image1 {
+        right: 0px;
+    }
+
+    .icon i {
+        font-size: 12px;
+    }
+
+    .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icon span {
+        height: 20px;
+        width: 20px;
+        right: -5px;
+        top: -5px;
+    }
+
+    .test-val1 span {
+        margin-bottom: 5px;
+    }
+
+    .sec5 {
+        padding: 50px 0;
+    }
+
+    .type-btn a {
+        padding: 12px 20px;
+        margin-bottom: 5px;
+    }
+
+    .sec6 .container {
+        padding: 50px 0;
+    }
+
+    .services {
+        margin-top: 30px;
+    }
+
+    .sec2 .container .p-val {
+        width: 100%;
+    }
+
+    .sec2 {
+        padding: 50px 0;
+    }
+
+    .form-val {
+        padding: 0px;
+        gap: 15px;
+    }
+
+    .form-val1 {
+        gap: 15px;
+    }
+
+    .sec1 .container {
+        padding: 50px 0 70px;
+    }
+
+    .galleryimage img {
+        object-fit: cover;
+        object-position: 100% 60%;
+    }
+
+    .ab-val2 img {
+        object-fit: cover;
+        object-position: 100% 0%;
+    }
+
+    .ab-val1,
+    .ab-val1 img,
+    .ab-val2 img,
+    .ab-val2,
+    .galleryimage img,
+    .galleryimage {
+        height: 250px;
+        width: 100%;
+    }
+
+    .ab-val1 img {
+        object-fit: cover;
+        object-position: 0% 85%
+    }
+
+    .sec4 .container div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .s-val {
+        right: 10px;
+        bottom: 50px;
+    }
+
+    .s-val div {
+        height: 45px;
+        width: 45px;
+    }
+
+    .s-val span {
+        height: 35px;
+        width: 35px;
+    }
+
+    .blog-con-3 div {
+        align-items: start;
+        gap: 10px;
+    }
+
+    .blog-con-3 {
+        padding: 10px;
+    }
+
+    .sec9 .container .d-f input {
+        padding: 15px 0;
+    }
+
+    .sec9 .container .d-f {
+        padding-left: 15px;
+    }
+
+    .sec9 .container .d-f a {
+        padding: 11px 20px;
+    }
+
+    .list-val1,
+    .list-val2 {
+        width: 100%;
+    }
+
+    .list-val1 .d-f,
+    .list-val2 .d-f,
+    .blog-con-2 div,
+    .blog-con-2 div img {
+        height: 250px;
+    }
+
+    .list-val1 .d-f img,
+    .list-val2 .d-f img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0% 20%
+    }
+
+    .blog-con-1 .blog-con-3,
+    .blog-con-1 .blog-con-3 .d-f {
+        height: fit-content;
+    }
+
+    footer .container p {
+        word-spacing: 2px;
+    }
+
+    footer .container p a {
+        font-size: 14px;
+    }
+
+    footer .container .d-f {
+        gap: 15px
+    }
+
+    footer .container .d-f a,
+    footer .container p {
+        font-size: 12px;
+    }
+
+    .sec10 .container {
+        padding: 50px 0 80px;
+    }
+
+    .sec8 .container {
+        padding: 50px 0;
+    }
+
+    header .container div .navbar::before {
+        display: none;
+    }
+}
+
+
+@media(max-width:375px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .image {
+        width: 250px;
+    }
+
+    .ic-val {
+        background-color: transparent;
+    }
+
+    .test-val,
+    .test-val1 {
+        width: 290px;
+    }
+}
+.ne {
+    margin-left: 130px;
+}
+    </style>
+</head>
+<body>
+    <header class="pos-val-rel">
+        <div class="container 	pos-val-rel">
+            <div class="d-f pos-val-abs">
+                <a href="javascript:;" class="logo d-f" title="logo"><img src="./Asserts/light-Grili.png"
+                        alt="company logo image" title="company logo"></a>
+                <span class="icon mgn-val d-f pos-val-rel"><i class="bi bi-search"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M464 428L339.92 303.9a160.48 160.48 0 0 0 30.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0 0 94.58-30.72L428 464ZM209.32 319.69a110.38 110.38 0 1 1 110.37-110.37a110.5 110.5 0 0 1-110.37 110.37" />
+                        </svg></i></span>
+                        <input type="checkbox" name="check" id="check">
+		        <label for="check" class="checkbox">
+		   	         <i class="bi bi-list "><svg class="ne" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"/></svg></i>
+		   	         <i class="material-icons "></i>
+		        </label>
+                <nav class="d-f">
+                    <ul class="d-f">
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="home">Home<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="home-value">Home one</a>
+                                <a href="javascript:;" title="home-value">Home two</a>
+                                <a href="javascript:;" title="home-value">Home three</a>
+                                <a href="javascript:;" title="home-value">Home four</a>
+                                <a href="javascript:;" title="home-value">Home five</a>
+                                <a href="javascript:;" title="home-value">Home six</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="about">About Us<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="aboutvalue">About Us One</a>
+                                <a href="javascript:;" title="aboutvalue">About Us Two</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="menu">Menu<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="menuvalue">Menu One</a>
+                                <a href="javascript:;" title="menuvalue">Menu Two</a>
+                                <a href="javascript:;" title="menuvalue">Menu Three</a>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;" class="d-f" title="logo"><img src="./Asserts/light-Grili.png"
+                                    alt="image" title="company logo"></a></li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="blog">Blog<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="blogvalue">Blog</a>
+                                <a href="javascript:;" title="blogvalue">Blog Details</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascriptjavascript:;" class="d-f"
+                                title="pages">Pages<span><i class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="pagevalue">Shop</a>
+                                <a href="javascript:;" title="pagevalue">Shop Details</a>
+                                <a href="javascript:;" title="pagevalue">Cart</a>
+                                <a href="javascript:;" title="pagevalue">Checkout</a>
+                                <a href="javascript:;" title="pagevalue">About Us One</a>
+                                <a href="javascript:;" title="pagevalue">About Us Two</a>
+                                <a href="javascript:;" title="pagevalue">Chef One</a>
+                                <a href="javascript:;" title="pagevalue">Chef Two</a>
+                                <a href="javascript:;" title="pagevalue">Chef details</a>
+                                <a href="javascript:;" title="pagevalue">Reservation</a>
+                                <a href="javascript:;" title="pagevalue">Reservation Two</a>
+                            </div>
+                        </li>
+                        <li><a href="javascriptjavascript:;" class="il2  d-f" title="contact">Contact Us</a> </li>
+                    </ul>
+                </nav>
+                <span class="icon d-f pos-val-rel">
+                    <i class="bi bi-cart3"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                            viewBox="0 0 512 512">
+                            <circle cx="176" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="32" />
+                            <circle cx="400" cy="416" r="16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="32" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32" d="M48 80h64l48 272h256" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32"
+                                d="M160 288h249.44a8 8 0 0 0 7.85-6.43l28.8-144a8 8 0 0 0-7.85-9.57H128" />
+                        </svg></i>
+                    <span class="d-f pos-val-abs">0</span>
+                </span>
+                <input type="checkbox" name="check" id="check">
+                <label for="check" class="checkbox">
+                    <i class="bi bi-list menu"></i>
+                    <i class="material-icons close">close</i>
+                </label>
+                <div class="navbar ">
+                    <ul class="d-f">
+                        <li><a href="javascript:;" class="d-f" title="logo"><img src="./Asserts.img/light-Grili.png"
+                                    alt="company logo image" title="company logo"></a></li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="home">Home<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="home-value">Home one</a>
+                                <a href="javascript:;" title="home-value">Home two</a>
+                                <a href="javascript:;" title="home-value">Home three</a>
+                                <a href="javascript:;" title="home-value">Home four</a>
+                                <a href="javascript:;" title="home-value">Home five</a>
+                                <a href="javascript:;" title="home-value">Home six</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="about">About Us<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="aboutvalue">About Us One</a>
+                                <a href="javascript:;" title="aboutvalue">About Us Two</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="menu">Menu<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="menuvalue">Menu One</a>
+                                <a href="javascript:;" title="menuvalue">Menu Two</a>
+                                <a href="javascript:;" title="menuvalue">Menu Three</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="blog">Blog<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="blogvalue">Blog</a>
+                                <a href="javascript:;" title="blogvalue">Blog Details</a>
+                            </div>
+                        </li>
+                        <li class="home pos-val-rel"><a href="javascript:;" class="d-f" title="pages">Pages<span><i
+                                        class="material-icons"></i></span></a>
+                            <div class="home1 d-f pos-val-abs">
+                                <a href="javascript:;" title="pagevalue">Shop</a>
+                                <a href="javascript:;" title="pagevalue">Shop Details</a>
+                                <a href="javascript:;" title="pagevalue">Cart</a>
+                                <a href="javascript:;" title="pagevalue">Checkout</a>
+                                <a href="javascript:;" title="pagevalue">About Us One</a>
+                                <a href="javascript:;" title="pagevalue">About Us Two</a>
+                                <a href="javascript:;" title="pagevalue">Chef One</a>
+                                <a href="javascript:;" title="pagevalue">Chef Two</a>
+                                <a href="javascript:;" title="pagevalue">Chef details</a>
+                                <a href="javascript:;" title="pagevalue">Reservation</a>
+                                <a href="javascript:;" title="pagevalue">Reservation Two</a>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;" class="il2  d-f" title="contact">Contact Us</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <img class="image pos-val-abs" src="./Asserts/hero-img-1-1.png" alt="dish name img" title="dish name">
+            <img class="image1 pos-val-abs" src="./Asserts/hero-img-1-2.png" alt="price-rate img" title="price-rate">
+        </div>
+    </header>
+    <section class="sec1">
+        <div class="container d-f">
+            <span class="f-fc span-val">Corporate Applications</span>
+            <span class="f-fr h2-val">Our Services</span>
+            <p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital .dpropriately
+                benchmark networks.</p>
+            <img src="./Asserts/sec-title-1.png" alt="design img" title="design" class="img-val">
+            <div class=" services d-f pos-val-rel">
+                <div class="service-val d-f pos-val-rel">
+                    <div class="service-val2">
+                        <img src="./Asserts/service-img-1-1.jpg" alt="service-man img" title="sevice-man">
+                    </div>
+                    <div class="service-val1">
+                        <span class="h3-val f-fr h3-val">Home Delivery</span>
+                        <p class="p-val">Continually utilize team building niche markets before visionary catalysts for
+                            change.</p>
+                        <span class="ser-val3 pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg><i class="material-icons"></i></span>
+                        <a class="pos-val-abs d-f" href="javascript:;" title="button"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
+                            <i class="material-icons"></i>
+                            learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="service-val d-f pos-val-rel">
+                    <div class="service-val2">
+                        <img src="./Asserts/service-img-1-3.jpg" alt="man eat food img" title="man eat food">
+                    </div>
+                    <div class="service-val1">
+                        <span class="h3-val f-fr h3-val">Buffet Services</span>
+                        <p class="p-val">Continually utilize team building niche markets before visionary catalysts for
+                            change.</p>
+                        <span class="ser-val3 pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg><i class="material-icons"></i></span>
+                        <a class="pos-val-abs d-f" href="javascript:;" title="button">
+                            <i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>
+                            learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="service-val d-f pos-val-rel">
+                    <div class="service-val2">
+                        <img src="./Asserts/service-img-1-1.jpg" alt="party img" title="party image">
+                    </div>
+                    <div class="service-val1">
+                        <span class="h3-val f-fr h3-val">Party Services</span>
+                        <p class="p-val">Continually utilize team building niche markets before visionary catalysts for
+                            change.</p>
+                        <span class="ser-val3 pos-val-abs"><i class="material-icons"></i><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></span>
+                        <a class="pos-val-abs d-f" href="javascript:;" title="button">
+                            <i class="material-icons"></i>
+                            learn more
+                        </a>
+                    </div>
+                </div>
+                <span class="d-f arrow1 pos-val-abs"><i class="material-icons" style="font-size:40px"></i></span>
+                <span class="d-f arrow2 pos-val-abs"><i class="material-icons" style="font-size:40px"></i></span>
+            </div>
+            
+            <a class="s-val d-f" href="#">
+                <div class="pos-val-abs"></div>
+                <span class="d-f"><i class="material-icons"></i><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19" />
+                    </svg></span>
+            </a>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="container d-f">
+            <span class="f-fc span-val">Corporate Applications</span>
+            <span class="f-fr h2-val">Make Reservation</span>
+            <p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital. dpropriately
+                benchmark
+                networks.</p>
+            <img src="./Asserts/sec-title-2.png" alt="design img" title="design" class="img-val">
+            <div class="form-val d-f">
+                <div class="form-val1 d-f">
+                    <div class="pos-val-rel">
+                        <input placeholder="SelectDate" class="textbox-n" type="text" onfocus="(type='date')" onblur="(type='text')" id="date" />
+                        <i class="fa fa-calendar pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="20px"
+                                height="20px" viewBox="0 0 1024 1024">
+                                <path fill="currentColor"
+                                    d="m960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985m0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32m0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32m-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32m0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32" />
+                            </svg></i>
+                    </div>
+                    <div class="pos-val-rel">
+                        <input placeholder="SelectTime" class="textbox-n" type="text" onfocus="(type='time')" onblur="(type='text')" id="time" />
+                        <i class="fa fa-clock-o pos-val-abs" style="font-size:18px"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
+                            </svg></i>
+                    </div>
+                    <div class="pos-val-rel">
+                        <input type="number" placeholder="Total Guests" />
+                        <i class="fa fa-user pos-val-abs" style="font-size:18px"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="30px" height="30px" viewBox="0 0 48 48">
+                                <path fill="currentColor"
+                                    d="M28 8a4 4 0 1 1-8 0a4 4 0 0 1 8 0M18 18.82c-.217.513-.41 1.19-.564 1.995C17.03 22.931 17 25.273 17 26a2 2 0 1 1-4 0c0-.773.026-3.431.508-5.94c.238-1.236.616-2.607 1.265-3.717c.651-1.115 1.822-2.343 3.671-2.343h11.112c1.849 0 3.02 1.228 3.671 2.343c.649 1.11 1.027 2.48 1.265 3.717c.482 2.509.508 5.167.508 5.94a2 2 0 1 1-4 0c0-.727-.03-3.069-.436-5.185c-.155-.805-.347-1.482-.564-1.994V42a2 2 0 0 1-3.994.153l-1-13A2 2 0 0 1 25 29h-2q0 .076-.006.153l-1 13A2 2 0 0 1 18 42z" />
+                            </svg></i>
+                    </div>
+                </div>
+                <div class="form-val2 pos-val-rel">
+                    <textarea cols="20" rows="8" placeholder="Special Message"></textarea>
+                    <i class="fa fa-pencil pos-val-abs"></i>
+                </div>
+                <input type="button" value="Book Your Seat" class="btn">
+            </div>
+        </div>
+    </section>
+
+    <section class="sec3 pos-val-rel">
+        <div class="container d-f pos-val-rel">
+            <div class="about-val1 d-f">
+                <div class="ab-val2">
+                    <img src="./Asserts/about-img-1-1.jpg" alt="cook img" title="cook image">
+                </div>
+                <div class="d-f">
+                    <span class="f-fc span-val">Competently promote sticky supply chains</span>
+                    <span class="f-fr h2-val">Priately unleash & "outside the box"</span>
+                    <p class="p-val">Enthusiastically syndicate high-quality initiatives vis-a-vis functional internal
+                        or
+                        "organic" sources. Intrinsicly formulate intuitive benefits through client-based content.
+                        Assertively embrace intuitive quality vectors rather than holistic process improvements.</p>
+                </div>
+            </div>
+            <div class="about-val1-1 d-f pos-val-abs">
+                <div class="ab-val1 pos-val-rel">
+                    <img src="./Asserts/about-img-1-2.jpg" alt="cook img" title="cook image" class="pos-val-rel">
+                </div>
+                <div class="about-val1-2 d-f">
+                    <div class="about-val1-3 d-f">
+                        <img src="./Asserts/shopping-cart.png" alt="shoppingcart img" title="shoppingcart">
+                        <div class="d-f">
+                            <span class="h3-val f-fr">Quiet Environment</span>
+                            <p class="p-val">Objectively transition virtual functionaities via enterprise-wide benefits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-val1-4">
+                        <span class="h3-val f-fr">Hygienic Food</span>
+                        <p class="p-val">Objectively transition virtual functionaities via enterprise- wide benefits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec4">
+        <div class="container d-f">
+            <div class="d-f">
+                <span class="f-fr">25</span>
+                <p>Years Of Experience</p>
+            </div>
+            <div class="d-f">
+                <span class="f-fr">500</span>
+                <p>Experienced Worker</p>
+            </div>
+            <div class="d-f">
+                <span class="f-fr">5m</span>
+                <p>Happy Customers</p>
+            </div>
+            <div class="d-f">
+                <span class="f-fr">99</span>
+                <p>Cup of Coffee & Tea</p>
+            </div>
+        </div>
+    </section>
+    <section class="sec5 pos-val-rel">
+        <div class="container d-f pos-val-rel">
+            <span class="f-fc span-val">Corporate Applications</span>
+            <span class="f-fr h2-val">Our Food Menu</span>
+            <p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital. dpropriately
+                benchmark networks.</p>
+            <img src="./Asserts/sec-title-1.png" alt="design img" title="design" class="img-val">
+            <div class="type-btn d-f">
+                <a href="javascript:;" title="buttons" class="active">Beverage</a>
+                <a href="javascript:;" title="buttons">Breakfast</a>
+                <a href="javascript:;" title="buttons">Dinner</a>
+                <a href="javascript:;" title="buttons">Lunch</a>
+                <a href="javascript:;" title="buttons">Party</a>
+            </div>
+            <div class="menulist d-f">
+                <div class="list1 d-f">
+                    <div class="list-val1 d-f pos-val-rel">
+                        <div class="list-val1-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="vegitable">Parmesan
+                                    Vegetable</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>111.00</span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-1.jpg" alt="vegitable img" title="vegitable">
+                        </div>
+                        <span class="sp-val pos-val-abs"><i class="fa fa-star"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></i></span>
+                    </div>
+                    <div class="list-val2 d-f pos-val-rel">
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>11.50</span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-2.jpg" alt="pizza img" title="pizza">
+                        </div>
+                        <div class="list-val2-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="buttermilk fried">Buttermilk Fried
+                                    With</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <span class="sp-val1 pos-val-abs"><i class="fa fa-star"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></i></span>
+                    </div>
+                </div>
+                <div class="list1 d-f">
+                    <div class="list-val1 d-f pos-val-rel">
+                        <div class="list-val1-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" titile="t-shirt with logo">T-Shirt with
+                                    Logo</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>1.00<s><i class="fa fa-dollar"></i>3.00</s></span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-3.jpg" alt="pizza img" title="pizza">
+                        </div>
+                        <span class="sp-val pos-val-abs"><i class="fa fa-star"></i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></span>
+                    </div>
+                    <div class="list-val2 d-f pos-val-rel">
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>18.00</span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-4.jpg" alt="chicken img" title="chicken">
+                        </div>
+                        <div class="list-val2-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="mustard chicken">Mustard Chicken
+                                    with</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <span class="sp-val1 pos-val-abs"><i class="fa fa-star"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></i></span>
+                    </div>
+                </div>
+
+                <div class="list1 d-f">
+                    <div class="list-val1 d-f pos-val-rel">
+                        <div class="list-val1-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="pasta">Bacon Ranch Pasta</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>30.00<s><i class="fa fa-dollar">50.00</i></s></span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-5.jpg" alt="pizza img" title="pasta">
+                        </div>
+                        <span class="sp-val pos-val-abs"><i class="fa fa-star"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></i></span>
+                    </div>
+                    <div class="list-val2 d-f pos-val-rel">
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>1.00<s><i class="fa fa-dollar">18.00</i></s></span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-1.jpg" alt="buger img" title="burger">
+                        </div>
+                        <div class="list-val2-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="burger">Caffè macchiato</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <span class="sp-val1 pos-val-abs"><i class="fa fa-star"></i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></span>
+                    </div>
+                </div>
+
+                <div class="list1 d-f">
+                    <div class="list-val1 d-f pos-val-rel">
+                        <div class="list-val1-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="salmon fish fried">Salmon Fish
+                                    Fried</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>111.00</span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-2.jpg" alt="fish fry img" title="fish fry">
+                        </div>
+                        <span class="sp-val pos-val-abs"><i class="fa fa-star"></i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></span>
+                    </div>
+                    <div class="list-val2 d-f pos-val-rel">
+                        <div class="d-f">
+                            <div>
+                                <span><i class="fa fa-dollar"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429c0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4m-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399m8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4"/></svg></i>11.50</span>
+                            </div>
+                            <img src="./Asserts/gallery-img-1-3.jpg" alt="pastha img" title="pastha">
+                        </div>
+                        <div class="list-val2-1 pos-val-rel">
+                            <span class="h3-val f-fr"><a href="javascript:;" title="kabab">Gina Pinot Noir
+                                    Taste</a></span>
+                            <p>Soft Drink, Dim Polao, Kabab</p>
+                        </div>
+                        <span class="sp-val1 pos-val-abs"><i class="fa fa-star"></i><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.123 3.572l1.241 5.313L12 16.102z"/></svg></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec6">
+		<div class="container d-f">
+			<span class="f-fc span-val">Corporate Applications</span>
+			<span class="f-fr h2-val">Our Food Gallery</span>
+			<p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital. dpropriately benchmark networks.</p>
+			<img src="./Asserts/sec-title-1.png" alt="img" title="design" class="img-val">
+			<div class="gallery-val d-f">
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-1.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-2.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+				    <img src="./Asserts/gallery-img-1-3.jpg" alt="gallery img" title="galleryimage" class="g-image">
+				    <div class="d-f pos-val-abs">
+				    	<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+				    </div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-4.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-3.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-4.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>	
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-5.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+				<div class="galleryimage pos-val-rel">
+					<img src="./Asserts/gallery-img-1-1.jpg" alt="gallery img" title="galleryimage" class="g-image">
+					<div class="d-f pos-val-abs">
+						<i class="bi bi-eye pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"/></svg></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section class="sec7 pos-val-rel">
+        <div class="container d-f pos-val-rel">
+            <img src="./Asserts/the-sale.png" alt="sale img" title="sale">
+            <a href="javascript:;">ORDER NOW</a>
+        </div>
+    </section>
+    <section class="sec8">
+        <div class="container d-f">
+            <span class="f-fc span-val">Corporate Applications</span>
+            <span class="f-fr h2-val">Our Testimonial</span>
+            <p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital. dpropriately
+                benchmark networks.</p>
+            <img src="./Asserts/sec-title-1.png" alt="design img" title="design" class="img-val">
+            <div class="test-val d-f">
+                <div class="test-val1 d-f">
+                    <img src="./Asserts/testimonial-author-1-1.png" alt="author img" title="design"
+                        class="authorprofile">
+                    <span class="h3-val f-fr">Mary Rivera</span>
+                    <span>Chef Leader</span>
+                    <p class="p-val">Uniquely engineer prospective networks rather than clicks-and-mortar channels.
+                        Credibly impact bleeding-edge .</p>
+                    <div class="d-f">
+                        <div class="test-val1-1"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec9">
+        <div class="container d-f">
+            <div>
+                <h2 class="f-fr">Get Our Newsletter</h2>
+                <p>Get updates for new products</p>
+            </div>
+            <div class="d-f">
+                <span><i class="bi bi-envelope"></i></span>
+                <input type="text" placeholder="Enter Your Email">
+                <a href="javascript:;" title="subscribe">subscribe</a>
+            </div>
+        </div>
+    </section>
+    <section class="sec10">
+    <div class="container d-f">
+        <span class="f-fc span-val">Corporate Applications</span>
+        <span class="f-fr h2-val">Our Latest News</span>
+        <p class="p-val">Assertively myocardinate robust e-tailers for extensible human capital. dpropriately benchmark
+            networks.</p>
+        <img src="./Asserts/sec-title-1.png" alt="design img" title="design" class="img-val">
+        <div class="blog-con-1 d-f">
+            <div class="blog-con-2 pos-val-rel">
+                <div>
+                    <img src="./Asserts/blog-list-img-1-1.jpg" alt="cooking img" title="cooking">
+                </div>
+                <div class="blog-con-3">
+                    <span class="h3-val f-fr"><a href="javascript:;" title="h3-val">Compet supply customized initiatives
+                            whereas</a></span>
+                    <div class="d-f">
+                        <span><i class="fa fa-comments-o"></i> 31 comments</span>
+                        <span><i class="fa fa-calendar"></i> Nomber 14,2024</span>
+                    </div>
+                </div>
+                <span class="blog-con-4 d-f pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg><i class="material-icons"></i></span>
+            </div>
+            <div class="blog-con-2 pos-val-rel">
+                <div>
+                    <img src="./Asserts/blog-list-img-1-6.jpg" alt="dish img" title="dish">
+                </div>
+                <div class="blog-con-3">
+                    <span class="h3-val f-fr"><a href="javascript:;" title="h3-val">Dynamically enable cutting content
+                            without</a></span>
+                    <div class="d-f">
+                        <span><i class="fa fa-comments-o"></i> 9 comments</span>
+                        <span><i class="fa fa-calendar"></i> November 14,2021</span>
+                    </div>
+                </div>
+                <span class="blog-con-4 d-f pos-val-abs"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg><i class="material-icons"></i></span>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="sec11">
+		<div class="container d-f">
+			<div class="sec11-1 d-f">
+				<span class="h2-val f-fr">About Us</span>
+				<div class="sec11-2">
+					<p>Energistically repurpose client-based odels rather than magnetic sources. Intrinsicly bcks-and-mortar ideas before.</p>
+					<div class="d-f">
+						<span class="d-f"><i class="fa fa-facebook"></i><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="24" stroke-dashoffset="24" d="M17 4l-2 0c-2.5 0 -4 1.5 -4 4v12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M8 12h7"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="8;0"/></path></g></svg></span>
+						<span class="d-f"><i class="fa fa-twitter"></i><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M17.817 6.989c-.353-.508-1.297-1.222-2.826-.914c-.892.179-1.425.62-1.764 1.202c-.361.62-.536 1.463-.536 2.444a1 1 0 0 1-1 1c-2.366 0-4.618-.703-6.513-2.604a10.5 10.5 0 0 0-.168 2.34c.053 1.086.312 2.175.927 3.108c.605.917 1.6 1.757 3.264 2.285a1 1 0 0 1 .41 1.655a8.5 8.5 0 0 1-1.796 1.405c1.06.11 2.082.118 3.03.032c1.92-.174 3.449-.723 4.405-1.5c2.013-1.632 3.09-4.066 2.89-8.144c-.034-.67.613-1.393.925-1.942c-.471.088-.943.072-1.248-.367M4.594 4.984a1 1 0 0 1 .941.429C7.011 7.572 8.783 8.47 10.75 8.674c.096-.841.323-1.672.75-2.404c.626-1.074 1.644-1.864 3.098-2.156c2.01-.404 3.54.324 4.427 1.215l1.792-.335a1 1 0 0 1 1.053 1.478l-1.72 3.022c.157 4.361-1.055 7.405-3.639 9.502c-1.37 1.112-3.332 1.743-5.485 1.938c-2.17.196-4.623-.041-7.061-.753a1 1 0 0 1 .007-1.922c1.226-.349 2.16-.65 3.003-1.177c-1.199-.636-2.082-1.468-2.707-2.416c-.868-1.318-1.19-2.788-1.254-4.113S3.141 8 3.343 7.115c.115-.505.249-1.011.434-1.495a1 1 0 0 1 .818-.636Z"/></g></svg></span>
+						<span class="d-f"><i class="fa fa-youtube-play"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14 12l-3.5 2v-4z"/><path d="M2 12.708v-1.416c0-2.895 0-4.343.905-5.274c.906-.932 2.332-.972 5.183-1.053C9.438 4.927 10.818 4.9 12 4.9s2.561.027 3.912.065c2.851.081 4.277.121 5.182 1.053S22 8.398 22 11.292v1.415c0 2.896 0 4.343-.905 5.275c-.906.931-2.331.972-5.183 1.052c-1.35.039-2.73.066-3.912.066s-2.561-.027-3.912-.066c-2.851-.08-4.277-.12-5.183-1.052S2 15.602 2 12.708Z"/></g></svg></i></span>
+						<span class="d-f"><i class="fa fa-linkedin"></i><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><g fill="currentColor"><path fill-rule="evenodd" d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606" clip-rule="evenodd"/><path d="M7.2 8.809H4V19.5h3.2z"/></g></svg></span>
+						<span class="d-f"><i class="fa fa-instagram"></i><svg xmlns="http://www.w3.org/2000/svg"    width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M17.34 5.46a1.2 1.2 0 1 0 1.2 1.2a1.2 1.2 0 0 0-1.2-1.2m4.6 2.42a7.6 7.6 0 0 0-.46-2.43a4.9 4.9 0 0 0-1.16-1.77a4.7 4.7 0 0 0-1.77-1.15a7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2s-3.06 0-4.12.06a7.3 7.3 0 0 0-2.43.47a4.8 4.8 0 0 0-1.77 1.15a4.7 4.7 0 0 0-1.15 1.77a7.3 7.3 0 0 0-.47 2.43C2 8.94 2 9.28 2 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43a4.7 4.7 0 0 0 1.15 1.77a4.8 4.8 0 0 0 1.77 1.15a7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47a4.7 4.7 0 0 0 1.77-1.15a4.85 4.85 0 0 0 1.16-1.77a7.6 7.6 0 0 0 .46-2.43c0-1.06.06-1.4.06-4.12s0-3.06-.06-4.12M20.14 16a5.6 5.6 0 0 1-.34 1.86a3.06 3.06 0 0 1-.75 1.15a3.2 3.2 0 0 1-1.15.75a5.6 5.6 0 0 1-1.86.34c-1 .05-1.37.06-4 .06s-3 0-4-.06a5.7 5.7 0 0 1-1.94-.3a3.3 3.3 0 0 1-1.1-.75a3 3 0 0 1-.74-1.15a5.5 5.5 0 0 1-.4-1.9c0-1-.06-1.37-.06-4s0-3 .06-4a5.5 5.5 0 0 1 .35-1.9A3 3 0 0 1 5 5a3.1 3.1 0 0 1 1.1-.8A5.7 5.7 0 0 1 8 3.86c1 0 1.37-.06 4-.06s3 0 4 .06a5.6 5.6 0 0 1 1.86.34a3.06 3.06 0 0 1 1.19.8a3.1 3.1 0 0 1 .75 1.1a5.6 5.6 0 0 1 .34 1.9c.05 1 .06 1.37.06 4s-.01 3-.06 4M12 6.87A5.13 5.13 0 1 0 17.14 12A5.12 5.12 0 0 0 12 6.87m0 8.46A3.33 3.33 0 1 1 15.33 12A3.33 3.33 0 0 1 12 15.33"/></svg></span>
+					</div>
+				</div>
+			</div>
+			<div class="sec11-1 d-f">
+				<span class="h2-val f-fr">Food Menu</span>
+				<div class="sec11-3 d-f">
+					<div>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>White Castle</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Cherry Limeade</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Pumpkin Spice</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Sandwich</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Krispy Kreme</span>
+					</div>
+					<div>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Beef Sandwich</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Wendy’s Frosty</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Burrito Supreme</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Donuts Coffee</span>
+						<span class="d-f"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg></i>Nacho Fries</span>
+					</div>
+				</div>
+			</div>
+			<div class="sec11-1 d-f">
+				<span class="h2-val f-fr">Latest Posts</span>
+				<div class="sec11-4 d-f">
+					<div class="d-f">
+						<div class="i1">
+							<img src="./Asserts/blog-list-img-1-5.jpg" alt="dish img" title="dish">
+						</div>
+						<div class="sec11-5">
+							<p class="h4-val f-fr"><a href="javascript:;" title="description">Dynamically enable cutting content without</a></p>
+						    <span><i class="fa fa-calendar"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48"><g fill="currentColor"><path fill-rule="evenodd" d="M17 25h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zM17 33h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M10 11a1 1 0 0 0-1 1v27a1 1 0 0 0 1 1h28c.55 0 1-.449 1-1.002V12.002c0-.554-.45-1.002-1-1.002h-3V9h3c1.658 0 3 1.347 3 3.002v26.996A3 3 0 0 1 38 42H10a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3h5v2zm21 0H19V9h12z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M39 20H9v-2h30z" clip-rule="evenodd"/><path d="M15 7a1 1 0 1 1 2 0v7a1 1 0 1 1-2 0zm16 0a1 1 0 1 1 2 0v7a1 1 0 1 1-2 0z"/></g></svg></i>14 Novenmber,2024</span>
+						</div>
+					</div>
+					<div class="d-f">
+						<div class="i1">
+							<img src="./Asserts/blog-list-img-1-7.jpg" alt="dish img" title="dish">
+						</div>
+						<div class="sec11-5">
+							<p class="h4-val f-fr"><a href="javascript:;" title="description">Continually synthesize fully tested rather</a></p>
+							<span><i class="fa fa-calendar"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48"><g fill="currentColor"><path fill-rule="evenodd" d="M17 25h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zM17 33h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm10 2h-2v2h2zm-2-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M10 11a1 1 0 0 0-1 1v27a1 1 0 0 0 1 1h28c.55 0 1-.449 1-1.002V12.002c0-.554-.45-1.002-1-1.002h-3V9h3c1.658 0 3 1.347 3 3.002v26.996A3 3 0 0 1 38 42H10a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3h5v2zm21 0H19V9h12z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M39 20H9v-2h30z" clip-rule="evenodd"/><path d="M15 7a1 1 0 1 1 2 0v7a1 1 0 1 1-2 0zm16 0a1 1 0 1 1 2 0v7a1 1 0 1 1-2 0z"/></g></svg></i>14 November,2024</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container d-f">
+			<p>Copyright <i class="fa fa-copyright"></i> 2024.All Rights Reserved by <a href="https://www.aboss.in/" target="blank" title="ABOSS">ABOSS</a>.</p>
+		    <div class="d-f">
+		    	<a href="javascript:;" title="terms">Terms & Conditions</a>
+		    	<a href="javascript:;" title="policy">Refund Policy</a>
+		    	<a href="javascript:;" title="support"> Support</a>
+		    </div>
+		</div>
+	</footer>
+</body>
+</html>
